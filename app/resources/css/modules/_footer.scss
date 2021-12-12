@@ -1,0 +1,29 @@
+footer {
+  padding: 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+  border-top: solid 1px #ccc;
+  font-size: 1rem;
+
+  .footer__content {
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: right;
+    color: #666;
+  }
+
+  @media (min-width: 1640px) {
+    padding: 20px 0;
+  }
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline;
+			margin-right: 10px;
+		}
+	}
+}

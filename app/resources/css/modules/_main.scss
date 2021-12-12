@@ -1,0 +1,67 @@
+@media (min-width: 1024px) {
+  /* to stope pages jumping horizontally when scrollbar appears or disappears */
+  html { overflow-y: scroll; }
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+	font: 1rem/1.35 arial, verdana, sans-serif;
+	margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+}
+
+a {
+	text-decoration: none;
+  color: #225E90;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+h1, h2, h3 {
+  font-family: Quicksand, arial, verdana, sans-serif;
+}
+
+figure {
+	margin: 0;
+
+	max-width: 768px;
+
+	img {
+		width: 100%;
+	}
+}
+
+main > article,
+aside {
+	padding: 0 20px;
+}
+
+aside {
+	background: #ddd;
+}
+
+@media (min-width: 1640px) {
+  main > article {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+

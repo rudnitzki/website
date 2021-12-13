@@ -723,154 +723,183 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   clear: both;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1600px;
-  margin: 0 20px 20px;
-  flex-wrap: wrap;
+  padding: 20px 20px 0;
+  margin: 0 auto;
 }
-@media (min-width: 1320px) {
-  header {
-    padding: 20px 0;
-    margin: 0 auto;
-  }
-}
-header .logo {
-  font-weight: bold;
-  font-size: 20px;
-  padding: 20px 0 0;
-  font-family: Quicksand, arial, verdana, sans-serif;
-}
-@media (min-width: 1024px) {
-  header .logo {
-    font-size: 2em;
-  }
-}
-header .logo:hover {
+.header a {
   text-decoration: none;
 }
-header nav {
-  font-family: Quicksand, arial, verdana, sans-serif;
-}
 @media (max-width: 767px) {
-  header nav {
-    flex: 0 0 100%;
+  .header {
+    flex-wrap: wrap;
   }
-  .js header nav {
+}
+@media (min-width: 768px) {
+  .header {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1320px) {
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.header .logo {
+  display: inline-block;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header .logo span {
+  font-weight: normal;
+  display: block;
+  color: #555;
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .header .logo {
+    font-size: 26px;
+  }
+  .header .logo span {
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+.header .logo:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  nav {
+    flex: 0 0 100%;
+    margin-top: 20px;
+  }
+  .js nav {
     overflow: hidden;
     transition: max-height 0.5s;
     margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  .js header nav {
+  nav {
+    margin-top: 9px;
+  }
+  .js nav {
     max-height: none !important;
   }
 }
-header nav ul {
+nav ul {
   list-style: none;
-  margin: 10px 0 0;
+  margin: 0;
   padding: 0;
 }
-header nav ul li {
+@media (max-width: 767px) {
+  nav ul {
+    margin-bottom: 20px;
+  }
+}
+nav ul li {
   line-height: 1.5;
+  color: #333;
+  font-weight: bold;
+}
+nav ul li a, nav ul li a:visited {
+  color: #226399;
+}
+nav ul li a.selected {
+  color: #333 !important;
 }
 @media (max-width: 767px) {
-  header nav ul li {
-    border-bottom: solid 1px #ccc;
-    line-height: 2.4;
+  nav ul li {
+    border-bottom: solid 1px #333;
+    line-height: 2.5;
   }
-  header nav ul li:last-child {
+  nav ul li:last-child {
     border: none;
   }
-  header nav ul li a {
+  nav ul li a {
     display: block;
   }
 }
 @media (min-width: 768px) {
-  header nav ul li {
+  nav ul li {
     display: inline;
     margin-left: 20px;
-    font-size: 1.2em;
   }
-  header nav ul li:first-child {
+  nav ul li:first-child {
     margin-left: 0;
   }
 }
-header nav ul li.github a {
-  background: url(../img/GitHub-Mark-64px.png) no-repeat;
-  background-size: contain;
-  padding-left: 24px;
-}
 
-header .hamburger {
+.header .hamburger {
   vertical-align: middle;
   padding: 0;
-  margin-top: 20px;
 }
-.no-js header .hamburger {
-  display: none;
-}
-header .hamburger:focus {
+.header .hamburger:focus {
   outline: none;
 }
-header .hamburger:hover {
+.header .hamburger span.hamburger-inner, .header .hamburger span.hamburger-inner::before, .header .hamburger span.hamburger-inner::after {
+  background-color: #226399;
+}
+.header .hamburger:hover {
   opacity: 1;
 }
 @media (min-width: 768px) {
-  header .hamburger {
+  .header .hamburger {
     display: none;
   }
 }
-header .hamburger .hamburger-inner, header .hamburger .hamburger-inner::before, header .hamburger .hamburger-inner::after {
+.header .hamburger .hamburger-inner, .header .hamburger .hamburger-inner::before, .header .hamburger .hamburger-inner::after {
   border-radius: 0;
 }
-header .hamburger .hamburger-label {
+.header .hamburger .hamburger-label {
   font-size: 16px;
   margin-left: 5px;
   font-weight: bold;
   text-transform: uppercase;
 }
-header .hamburger .hamburger-box {
-  width: 36px;
-}
-header .hamburger .hamburger-inner,
-header .hamburger .hamburger-inner::before,
-header .hamburger .hamburger-inner::after {
+.header .hamburger .hamburger-inner,
+.header .hamburger .hamburger-inner::before,
+.header .hamburger .hamburger-inner::after {
   width: 36px;
 }
 
-footer {
-  padding: 20px;
+.footer {
+  border-top: solid 1px #999;
+  padding: 15px 20px;
   margin-top: 40px;
-  margin-bottom: 20px;
-  border-top: solid 1px #ccc;
-  font-size: 1rem;
 }
-footer .footer__content {
-  max-width: 1600px;
-  margin: 0 auto;
-  text-align: right;
-  color: #666;
-}
-@media (min-width: 1640px) {
-  footer {
-    padding: 20px 0;
+@media (min-width: 1024px) {
+  .footer {
+    font-size: 1rem;
+    line-height: 1.35;
   }
 }
-footer ul {
+.footer a {
+  text-decoration: none;
+}
+@media (min-width: 1320px) {
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-footer ul li {
+.footer ul li {
   display: inline;
   margin-right: 10px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1140px) {
   /* to stope pages jumping horizontally when scrollbar appears or disappears */
   html {
     overflow-y: scroll;
@@ -878,7 +907,7 @@ footer ul li {
 }
 @font-face {
   font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
+  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
   font-weight: normal;
 }
 @font-face {
@@ -887,8 +916,9 @@ footer ul li {
   font-weight: bold;
 }
 body {
-  font: 1rem/1.35 arial, verdana, sans-serif;
+  font: 1rem/1.35 Quicksand, arial, verdana, sans-serif;
   margin: 0 auto;
+  max-width: 1280px;
 }
 @media (min-width: 1024px) {
   body {
@@ -898,15 +928,10 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: #225E90;
+  color: #226399;
 }
 a:hover {
   text-decoration: underline;
-}
-
-h1, h2, h3 {
-  font-family: Quicksand, arial, verdana, sans-serif;
 }
 
 figure {
@@ -917,22 +942,59 @@ figure img {
   width: 100%;
 }
 
-main > article,
-aside {
+main > article {
   padding: 0 20px;
 }
-
-aside {
-  background: #ddd;
-}
-
-@media (min-width: 1640px) {
+@media (min-width: 1140px) {
   main > article {
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
   }
 }
+main > article h1, main > article h2, main > article h3, main > article p {
+  margin-bottom: 0;
+}
+main > article h1 {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  main > article h1 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  main > article h1 {
+    display: none;
+  }
+}
+main > article h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5em;
+}
+main > article h2 + p,
+main > article h2 + ul {
+  margin-top: 0.5em;
+}
+@media (min-width: 768px) {
+  main > article h2 {
+    font-size: 1.5rem;
+  }
+}
+main > article p {
+  margin-top: 1rem;
+}
+main > article h3 + p {
+  margin-top: 0;
+}
+main > article ul {
+  padding-left: 1.1rem;
+}
+main > article li {
+  margin-bottom: 0.5em;
+}
+
 .stage {
   overflow: hidden;
   margin-bottom: 20px;
@@ -945,14 +1007,9 @@ aside {
     position: relative;
     margin-bottom: 40px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    gap: 50px;
     justify-content: space-between;
-    height: 50vh;
-  }
-  .stage .img-container {
-    width: 70%;
-    height: 100%;
-    border-left: 5px #fff solid;
   }
 }
 .stage img {
@@ -961,10 +1018,10 @@ aside {
 }
 @media (min-width: 1024px) {
   .stage img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 60%;
+    border-left: 5px #fff solid;
     /* fixes blurry downscaled images in Chrome on Mac */
+    image-rendering: -webkit-optimize-contrast;
   }
 }
 .stage h1 {
@@ -972,10 +1029,9 @@ aside {
 }
 @media (min-width: 1024px) {
   .stage h1 {
-    width: 30%;
     display: block;
-    margin: 0;
-    padding: 2%;
+    margin-bottom: 50px;
+    margin-left: 50px;
     font-size: 36px;
     line-height: 48px;
     font-weight: normal;
@@ -983,7 +1039,7 @@ aside {
 }
 @media (min-width: 1200px) {
   .stage h1 {
-    font-size: 48px;
-    line-height: 62px;
+    font-size: 42px;
+    line-height: 56px;
   }
 }

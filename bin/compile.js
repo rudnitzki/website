@@ -14,10 +14,8 @@ const registerContent = function(filename) {
 }
 
 const compileFile = function(pathToFile) {
-  console.log('file: ', pathToFile);
   const extension = path.extname(pathToFile);
   const filename = path.basename(pathToFile, extension);
-  console.log('filename: ', filename);
   const template = fs.readFileSync(pathToFile, 'utf8');
   registerContent(filename);
   const compiled = handlebars.compile(template);

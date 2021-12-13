@@ -1,20 +1,21 @@
-footer {
-  padding: 20px;
+.footer {
+	border-top: solid 1px #999;
+	padding: 15px 20px;
 	margin-top: 40px;
-	margin-bottom: 20px;
-  border-top: solid 1px #ccc;
-  font-size: 1rem;
 
-  .footer__content {
-    max-width: 1600px;
-    margin: 0 auto;
-    text-align: right;
-    color: #666;
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+    line-height: 1.35;
   }
+  
+	a {
+		text-decoration: none;
+	}
 
-  @media (min-width: 1640px) {
-    padding: 20px 0;
-  }
+	@media (min-width: 1320px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	ul {
 		list-style: none;

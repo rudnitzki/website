@@ -9,16 +9,9 @@
 		position: relative;
 		margin-bottom: 40px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    gap: 50px;
     justify-content: space-between;
-    height: 50vh;
-
-    .img-container {
-      width: 70%;
-      height: 100%;
-      border-left: 5px #fff solid;
-
-    }
 	}
 
 	img {
@@ -26,12 +19,11 @@
 		display: block;
 
 		@media (min-width: 1024px) {
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      width: 60%;
+      border-left: 5px #fff solid;
 
       /* fixes blurry downscaled images in Chrome on Mac */
-      //image-rendering: -webkit-optimize-contrast;
+      image-rendering: -webkit-optimize-contrast;
 		}
 	}
 
@@ -39,18 +31,17 @@
     display: none;
 
     @media (min-width: 1024px) {
-      width: 30%;
       display: block;
-      margin: 0;
-      padding: 2%;
+      margin-bottom: 50px;
+      margin-left: 50px;
       font-size: 36px;
       line-height: 48px;
       font-weight: normal;
     }
 
     @media (min-width: 1200px) {
-      font-size: 48px;
-      line-height: 62px;
+      font-size: 42px;
+      line-height: 56px;
     }
   }
 }

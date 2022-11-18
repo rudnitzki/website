@@ -919,8 +919,7 @@ body {
   font: 1rem/1.35 Quicksand, arial, verdana, sans-serif;
   margin: 0 auto;
   max-width: 1280px;
-  overflow-wrap: break-word;
-  /* so that inline elements such as long words do not cause horizontal scrolling. */
+  overflow-wrap: break-word; /* so that inline elements such as long words do not cause horizontal scrolling. */
 }
 @media (min-width: 1024px) {
   body {
@@ -1001,8 +1000,8 @@ main > article li {
   overflow: hidden;
   margin-bottom: 20px;
   color: white;
-  background: #1d3a52;
-  background: linear-gradient(45deg, #1d3a52 0%, #226399 60%);
+  background: rgb(29, 58, 82);
+  background: linear-gradient(45deg, rgb(29, 58, 82) 0%, rgb(34, 99, 153) 60%);
 }
 @media (min-width: 1024px) {
   .stage {
